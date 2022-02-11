@@ -1,0 +1,93 @@
+* {
+    font-size: 62.5%;
+    font-family: 'Lobster', cursive;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body {
+    /* background-color: rgb(241, 191, 226); */
+    height: 100vh;
+    background: linear-gradient(to bottom, #F4ABDE, #F1BFE2);
+    width: 100vw;
+}
+/* INDEX */
+.nav {
+    width: max-content;
+    justify-content: center;
+    margin: auto;
+}
+.nav-link {
+    color: black;
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 2rem 4rem;
+    margin-top: 5rem;
+    /* border: 1px white solid; */
+    padding: 1rem;
+    justify-content: center;
+}
+.nav-link:hover , .nav-link:focus {
+    color: white;
+}
+.nav-link:visited {
+    color: none;
+}
+.img-central {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 1rem;
+}
+h3 {
+    font-size: 2rem;
+}
+
+#nav {
+    display: none;
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+    .nav-link {
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width:300px) and (max-width:768px) {
+    header {
+        display: none;
+    }
+    #nav {
+        display: grid;
+        width: 100vw;
+        height: 5rem;
+        text-align: center;
+    }
+    .collapse-link {
+        font-size: 2rem;
+        color: white;
+    }
+    .collapse-link:hover {
+        color: #F4ABDE;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+}
