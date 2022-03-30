@@ -1,31 +1,38 @@
 * {
-    font-size: 62.5%;
     font-family: 'Lobster', cursive;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 body {
-    /* background-color: rgb(241, 191, 226); */
-    height: 100vh;
     background: linear-gradient(to bottom, #F4ABDE, #F1BFE2);
-    width: 100vw;
+    width: 99vw;
+    scrollbar-width : none;
 }
 
     /********************************* INDEX **********************************/
     /* HEADER Y FOOTER*/
 .nav {
-    width: max-content;
+    width: 100%;
     justify-content: center;
     margin: auto;
+    background-color: #F4ABDE;
+    border-bottom: 0.2rem solid black;
+}
+.nav-fixed {
+    position: fixed;
+    top: 0;
 }
 .nav-link {
     color: black;
     font-size: 3.5rem;
     font-weight: bold;
     margin: 2rem 4rem;
-    margin-top: 5rem;
-    /* border: 1px white solid; */
+    margin: center;
     padding: 1rem;
     justify-content: center;
 }
@@ -41,11 +48,12 @@ footer {
     justify-content: center;
     align-items: center;
     margin: auto;
+    margin-bottom: 0;
     text-align: center;
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 1rem;
 }
 h3 {
@@ -98,33 +106,73 @@ h3 {
     justify-content: center;
     align-items: center;
     z-index: 900;
+    margin-top: 10rem;
 }
 
     /********************************* POSTRES **********************************/
 
-.carousel {
-    width: 80%;
-    margin: auto;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    box-shadow: 1px 1px 12px 12px rgba(0, 0, 0, 0.589)
-}
-.carousel-control-next , .carousel-control-prev {
-    background-color: rgba(0, 0, 0, 0.26);
-}
-h4 {
-    font-size: 3rem;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.185);
-}
-.description {
-    font-size: 2rem;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.185);
+
+/* *********TIENDA********* */
+
+
+.tienda {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
 }
 
-@media (min-width:768px) and (max-width:1024px) {
-    .description {
-        display: none;
-    }
+.h3-tienda-text{
+    font-size: 4rem;
+    color: white;
+    margin: auto;
+    margin-top: 4rem;
+    justify-content: center;
+}
+
+h4, h5 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.7rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+.tienda {
+    justify-content: center;
+    align-items: center;
+}
+.productos {
+    margin: 4rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.329);
+    border-radius: 2rem;
+}
+.producto {
+    border: solid 0.2rem black;
+    border-radius: 2rem;
+    width: 40rem;
+}
+
+.button-tienda {
+    display: flex;
+    background-color: black;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 2px solid white;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-top: 2rem;
+    transition: all 800ms;
+}
+
+.button-tienda:hover {
+    background-color: #F1BFE2;
+    color: black;
+    border: 2px solid black;
 }
