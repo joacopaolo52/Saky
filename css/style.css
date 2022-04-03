@@ -63,10 +63,26 @@ h3 {
 #nav {
     display: none;
 }
+.nav-item-img {
+    position: absolute;
+    top:1rem;
+    right: 5rem;
+    background-color: #ffffff4b;
+    padding: 1.5rem;
+    border-radius: 90%;
+    margin: auto;
+    margin-top: 2rem;
+}
+.nav-img {
+    width: 4rem;
+}
 
 @media (min-width:768px) and (max-width:1024px) {
     .nav-link {
         font-size: 2.5rem;
+    }
+    .nav-img {
+        width: 3rem;
     }
 }
 
@@ -92,6 +108,14 @@ h3 {
     }
     h3 {
         font-size: 1.5rem;
+    }
+    .nav-img {
+        width: 2rem;
+    }
+    .nav-item-img {
+        position: relative ;
+        top: 3rem;
+        right: 2rem;
     }
 }
 .collapse {
