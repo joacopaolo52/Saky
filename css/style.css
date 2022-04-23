@@ -64,7 +64,7 @@ h3 {
     display: none;
 }
 .nav-item-img {
-    position: absolute;
+    position: fixed;
     top:1rem;
     right: 5rem;
     background-color: #ffffff4b;
@@ -72,6 +72,10 @@ h3 {
     border-radius: 90%;
     margin: auto;
     margin-top: 2rem;
+    z-index: 2000;
+}
+.nav-item-img:hover {
+    cursor: pointer;
 }
 .nav-img {
     width: 4rem;
@@ -113,8 +117,7 @@ h3 {
         width: 2rem;
     }
     .nav-item-img {
-        position: relative ;
-        top: 3rem;
+        top: 0rem;
         right: 2rem;
     }
 }
@@ -140,6 +143,7 @@ h3 {
 .inputNombre {
     border: none;
     width: 15rem;
+    max-width: 20rem;
     background-color: transparent;
     border-bottom: 0.2rem solid black;
 }
@@ -243,16 +247,59 @@ select {
     display: grid;
 }
 
-
+/* VER CARRITO */
 
 #verCarrito {
     display: none;
-    position: absolute;
-    margin: auto;
+    top: 0;
+    right: 0;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.925);
+    z-index: 1000;
+    text-align: center;
     justify-content: center;
     align-items: center;
-    height: auto;
-    width: 30vw;
+    font-size: 2rem;
     color: white;
-    background-color: black;
+    z-index: 2100;
+}
+
+#cerrarCarrito {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 3rem;
+}
+
+#verCarrito div h5 {
+    font-size: 2.5rem;
+}
+#verCarrito div h6 {
+    font-size: 2rem;
+}
+
+#listaCarrito {
+    height: 50vh;
+    overflow-y: scroll;
+}
+#listaCarrito::-webkit-scrollbar {
+    width:1rem;
+    color: black;
+    height: 0,3rem;
+}
+
+#listaCarrito::-webkit-scrollbar-thumb {
+    background-color: #00000094;
+    border-radius: 20px;
+    border: 1px solid #f1f2f3;
+    height: 0,3rem;
+}
+
+#pagar, #borrar {
+    width: 25rem;
+    margin: auto;
+    padding: 0;
+    text-align: center;
 }

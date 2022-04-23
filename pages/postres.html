@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/logo.jpg">
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/animate.css">
@@ -11,7 +12,18 @@
 </head>
 
 <body>
-  <div id="verCarrito"></div>
+  <div id="verCarrito">
+    <button id="cerrarCarrito">X</button>
+    <div>
+      <h5>Bienvenido al carrito de compras.</h5>
+      <hr>
+      <h6>Aqui puede ver lo que seleccionó</h6>
+    </div>
+    <div id="listaCarrito"></div>
+    <button id="pagar">PAGAR</button>
+    <button id="borrar">BORRAR TODO</button>
+  
+  </div>
   
             <!-- HEADER -->
 
@@ -19,11 +31,11 @@
         <ul class="nav nav-fixed justify-content-center">
             <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="postres.html">Postres</a></li>
-            <li class="nav-item"><a class="nav-link" href="infusiones.html">Infusiones</a></li>
-            <li class="nav-item-img"><img class="nav-img" src="../assets/carrito.png" alt="Carrito de compras"></li>
           </ul>
     </header>
 
+    <a class="nav-item-img"><img class="nav-img" src="../assets/carrito.png" alt="Carrito de compras"></a>
+    
     <!-- HEADER 2 -->
 
     <div id="nav">
@@ -34,7 +46,6 @@
           <ul>
             <li><a class="collapse-link" href="../index.html">Home</a></li>
             <li><a class="collapse-link" href="postres.html">Postres</a></li>
-            <li><a class="collapse-link" href="infusiones.html">Infusiones</a></li>
           </ul>
         </div>
       </div>
@@ -43,7 +54,6 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="nav-item-img"><img class="nav-img" src="../assets/carrito.png" alt="Carrito de compras"></div>
         </div>
       </nav>
 
