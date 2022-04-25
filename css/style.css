@@ -82,6 +82,9 @@ h3 {
 }
 
 @media (min-width:768px) and (max-width:1024px) {
+    #verCarrito {
+        width: 50vw !important;
+    }
     .nav-link {
         font-size: 2.5rem;
     }
@@ -91,6 +94,9 @@ h3 {
 }
 
 @media (min-width:300px) and (max-width:768px) {
+    #verCarrito {
+        width: 100vw !important;
+    }
     header {
         display: none;
     }
@@ -192,11 +198,7 @@ h4, h5 {
     padding: 0.5rem;
 }
 
-.tienda {
-    justify-content: center;
-    align-items: center;
-}
-.infusiones, .postres {
+.postres {
     margin: 4rem;
     padding: 2rem;
     background-color: rgba(255, 255, 255, 0.329);
@@ -208,7 +210,7 @@ h4, h5 {
     width: 40rem;
 }
 
-.button-infusiones, .button-postres {
+.button-postres {
     display: flex;
     background-color: black;
     color: white;
@@ -224,23 +226,10 @@ h4, h5 {
     transition: all 800ms;
 }
 
-.button-infusiones:hover, .button-postres:hover {
+.button-postres:hover {
     background-color: #F1BFE2;
     color: black;
     border: 2px solid black;
-}
-
-select {
-    display: flex;
-    margin: auto;
-    margin-top: 1rem;
-    font-size: 1.3rem;
-    width: 4rem;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    border: 0.2rem solid black;
-    color: black;
 }
 
 .modal {
@@ -255,7 +244,7 @@ select {
     right: 0;
     position: fixed;
     height: 100vh;
-    width: 100vw;
+    width: 35vw;
     background-color: rgba(0, 0, 0, 0.925);
     z-index: 1000;
     text-align: center;
@@ -303,3 +292,64 @@ select {
     padding: 0;
     text-align: center;
 }
+
+#cantidadCarrito {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, 0.769);
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+.cartItem {
+    display: flex;
+    background-color: #cf87ba;
+    border-radius: 10px;
+    margin: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 3px 3px 3px #11111134;
+    color: black;
+}
+
+.itemDescription {
+    display: flex;
+    width: 100%;
+    margin: 0 1rem;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2rem;
+    font-style: bold;
+}
+
+.cartItem img {
+    width: 10rem;
+    justify-content: center;
+    border-start-start-radius: 10px;
+}
+
+
+
+    /*SWEET ALERT */
+.swal2-styled.swal2-confirm {
+    font-size: 1.5rem !important;
+    background-color: transparent !important;
+    color: white;
+    border: 1px solid white !important;
+} 
+.swal2-styled.swal2-confirm:hover {
+    background-color: #F4ABDE !important;
+    color: black;
+    transition: all 1s;
+}
+
+.toastify {
+    width: auto;
+    font-size: 1.3rem;
+    text-align: center;
+}
+

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Saky - Postres</title>
 </head>
 
@@ -34,7 +35,7 @@
           </ul>
     </header>
 
-    <a class="nav-item-img"><img class="nav-img" src="../assets/carrito.png" alt="Carrito de compras"></a>
+    <a class="nav-item-img"><img class="nav-img" src="../assets/carrito.png" alt="Carrito de compras"><p id="cantidadCarrito"></p></a>
     
     <!-- HEADER 2 -->
 
@@ -66,71 +67,77 @@
 
     <div class="tienda">
         <div class="postres wow animate__animated animate__zoomIn">
-            <img src="../assets/postre1.jpg" class="producto img-fluid" alt="Producto">
+            <img src="../assets/postre0.jpg" class="producto img-fluid" alt="Producto">
             <hr>
             <h4>TARTA DE CHOCOLATE</h4>
-            <select name="cantidad" id="cantidad0">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
             <button class="button-postres button-postres0">Agregar al carrito</button>
+        </div>
+        <div class="postres wow animate__animated animate__zoomIn">
+            <img src="../assets/postre1.jpg" class="producto img-fluid" alt="Producto">
+            <hr>
+            <h4>TIRAMISÚ</h4>
+            <button class="button-postres button-postres1">Agregar al carrito</button>
         </div>
         <div class="postres wow animate__animated animate__zoomIn">
             <img src="../assets/postre2.jpg" class="producto img-fluid" alt="Producto">
             <hr>
-            <h4>TIRAMISÚ</h4>
-            <select name="cantidad" id="cantidad1">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
-            <button class="button-postres button-postres1">Agregar al carrito</button>
+            <h4>MUFFIN</h4>
+            <button class="button-postres button-postres2">Agregar al carrito</button>
         </div>
         <div class="postres wow animate__animated animate__zoomIn">
             <img src="../assets/postre3.jpg" class="producto img-fluid" alt="Producto">
             <hr>
-            <h4>MUFFIN</h4>
-            <select name="cantidad" id="cantidad2">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
-            <button class="button-postres button-postres2">Agregar al carrito</button>
+            <h4>CHOCOTORTA</h4>
+            <button class="button-postres button-postres3">Agregar al carrito</button>
         </div>
         <div class="postres wow animate__animated animate__zoomIn">
             <img src="../assets/postre4.jpg" class="producto img-fluid" alt="Producto">
             <hr>
-            <h4>CHOCOTORTA</h4>
-            <select name="cantidad" id="cantidad3">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
-            <button class="button-postres button-postres3">Agregar al carrito</button>
+            <h4>BROWNIE</h4>
+            <button class="button-postres button-postres4">Agregar al carrito</button>
         </div>
         <div class="postres wow animate__animated animate__zoomIn">
             <img src="../assets/postre5.jpg" class="producto img-fluid" alt="Producto">
             <hr>
-            <h4>BROWNIE</h4>
-            <select name="cantidad" id="cantidad4">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
-            <button class="button-postres button-postres4">Agregar al carrito</button>
-        </div>
-        <div class="postres wow animate__animated animate__zoomIn">
-            <img src="../assets/postre6.jpg" class="producto img-fluid" alt="Producto">
-            <hr>
             <h4>LEMON PIE</h4>
-            <select name="cantidad" id="cantidad5">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
             <button class="button-postres button-postres5">Agregar al carrito</button>
         </div>
+        <div class="postres wow animate__animated animate__zoomIn">
+          <img src="../assets/postre6.jpg" class="producto img-fluid" alt="Producto">
+          <hr>
+          <h4>TÉ NEGRO</h4>
+          <button class="button-postres button-postres6">Agregar al carrito</button>
+      </div>
+      <div class="postres wow animate__animated animate__zoomIn">
+          <img src="../assets/postre7.jpg" class="producto img-fluid" alt="Producto">
+          <hr>
+          <h4>SUBMARINO</h4>
+          <button class="button-postres button-postres7">Agregar al carrito</button>
+      </div>
+      <div class="postres wow animate__animated animate__zoomIn">
+          <img src="../assets/postre8.jpg" class="producto img-fluid" alt="Producto">
+          <hr>
+          <h4>CAFÉ NEGRO</h4>
+          <button class="button-postres button-postres8">Agregar al carrito</button>
+      </div>
+      <div class="postres wow animate__animated animate__zoomIn">
+          <img src="../assets/postre9.jpg" class="producto img-fluid" alt="Producto">
+          <hr>
+          <h4>TÉ DE MANZANILLA</h4>
+          <button class="button-postres button-postres9">Agregar al carrito</button>
+      </div>
+      <div class="postres wow animate__animated animate__zoomIn">
+          <img src="../assets/postre10.jpg" class="producto img-fluid" alt="Producto">
+          <hr>
+          <h4>TÉ DE TILO</h4>
+          <button class="button-postres button-postres10">Agregar al carrito</button>
+      </div>
+      <div class="postres wow animate__animated animate__zoomIn">
+          <img src="../assets/postre11.jpg" class="producto img-fluid" alt="Producto">
+          <hr>
+          <h4>CAPUCCINO</h4>
+          <button class="button-postres button-postres11">Agregar al carrito</button>
+      </div>
 
     </div>
 
@@ -147,6 +154,8 @@
     <script src="../js/bootstrap.js"></script>
     <script src="../js/app.js"></script>
     <script src="../js/wow.min.js"></script>
+    <script src="../js/sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script>
       new WOW().init();
     </script>
