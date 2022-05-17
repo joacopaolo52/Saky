@@ -92,12 +92,15 @@ const armarCarrito = (x) => {
     let itemDescription = document.createElement('div');
     itemDescription.className = 'itemDescription';
     cartItem.appendChild(itemDescription);
-    let cartName = document.createElement('h3');
+    let cartName = document.createElement('h4');
     cartName.innerText = `${postres[x].nombre}`;
-    let cartPrice = document.createElement('p');
-    cartPrice.innerText = `${postres[x].precio}`;
+    let cartPrice = document.createElement('h4');
+    cartPrice.innerText = `$${postres[x].precio}`;
+    // let cartRemove = document.createElement('i');
+    // cartRemove.className = "fas fa-trash-alt";
     itemDescription.appendChild(cartName);
     itemDescription.appendChild(cartPrice);
+    itemDescription.appendChild(cartRemove);
 
 }
 
@@ -181,28 +184,13 @@ buttonCarrito.addEventListener('click', () => {
 });
 
 
-    /*CREAR LISTA DE CARRITO */
-const verLista = () => {
-    const lista = document.createElement("ul");
-    listaCarrito.appendChild(lista);
-    let x = 0;
-    carrito.forEach(producto => {
-        let li = document.createElement("li");
-        li.innerHTML = `Producto: ${producto.nombre}, Precio: ${producto.precio}.`;
-        lista.appendChild(li);
-        x++;
-    })
-}
 
     /*BORRAR ITEMS DE TIENDA */
 
 const buttonBorrar = document.querySelector('#borrar');
 buttonBorrar.addEventListener('click', ()=> {
-    carrito.splice(0, 1000);
     verCarrito.setAttribute(`style`, `display: none;`);
-    listaCarrito.innerHTML= `<br>`;
-    cantidadCarrito.innerHTML = carrito.length;
-    if (carrito.length < 0) {
+    if (carrito.length > 0) {
         swal.fire({
             title: `Carrito eliminado`,
             icon: 'success',
@@ -213,7 +201,7 @@ buttonBorrar.addEventListener('click', ()=> {
             background: 'rgba(0, 0, 0, 0.900)',
             backdrop: `rgba(0,0,123,0.4)`
           })
-    } else {
+    } else if (carrito.length == 0) {
         swal.fire({
             title: `Carrito vacio`,
             text: `Agrega productos para continuar`,
@@ -226,20 +214,33 @@ buttonBorrar.addEventListener('click', ()=> {
             backdrop: `rgba(0,0,123,0.4)`
           })
     }
+    carrito.splice(0, 1000);
+    listaCarrito.innerHTML= `<br>`;
+    cantidadCarrito.innerHTML = carrito.length;
 })
+
+
+const borrarItem = (i) => {
+    carrito.splice(i,1);
+    let borrar = document.querySelector(`.cartItem;nth-of-type(${i})`);
+    borrar.setAttribute('style', `display: none;`);
+}
+
+// for (let x = 0; x < carrito.length; x++) {
+//     let cartRemove = document.querySelector(`.fas:nth-of-type(${x})`);
+//     cartRemove.addEventListener('click', () => {
+//         carrito.splice(x,1);
+//     });
+// }
+
+
+
+let cartRemove2 = document.querySelector(`.fas:nth-of-type(${2})`);
+    cartRemove2.addEventListener('click', () => {
+        carrito.splice(2,1);
+    });
 
 
     /*GUARDAR CARRITO */
 localStorage.setItem('CARRITO', carrito);
 
-
-
-/*
-<div class="cartItem">
-    <img src="./images/TiendaProductos/Nostril/Nostril Trinity Cristal.jpg" alt="Nostril Trinity Cristal">
-    <div class="itemDescription">
-        <h3>Nostril Trinity Cristal</h3>
-        <p>$1000</p>
-    <div>
-</div>
-*/
